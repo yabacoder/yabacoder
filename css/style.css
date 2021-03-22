@@ -541,8 +541,9 @@ h1 {
 		margin-bottom: var(--mb-2);
 	}
 
-	footer .content .contact span:nth-child(1) {
+	footer .content .contact li span:nth-child(1) {
 		color: var(--text-color);
+		font-size: var(--body-font);
 	}
 
 	footer .content .contact svg {
