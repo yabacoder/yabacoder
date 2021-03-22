@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/* Variables CSS */
+
+:root {
+	--header-height: 3rem;
+
+	/* Colors */
+	--first-color: #069c54;
+	--first-color-alt: #000025;
+	--secondary-color: #ff4900;
+	--title-color: #393939;
+	--text-color: #707070;
+	--text-color-light: #a6a6a6;
+	--body-color: #fff;
+	--container-color: #ffffff;
+
+	/* Fonts and Typography*/
+	--body-font: 'Poppins', sans-serif;
+	--biggest-font-size: 3.25rem;
+	--h1-font-size: 3rem;
+	--h1-font-mobile: 2.5rem;
+	--h2-font-size: 2.25rem;
+	--h2-font-size-sm: 2rem;
+	--h3-font-size: 1.85rem;
+	--h3-font-size-sm: 1.5rem;
+	--normal-font-size: 0.938rem;
+	--small-font-size: 0.813rem;
+	--smaller-font-size: 0.75rem;
+
+	/* Font Weight */
+	--font-medium: 500;
+	--font-semi-bold: 600;
+
+	/* Margins */
+	--mb-1: 0.5rem;
+	--mb-2: 1rem;
+	--mb-3: 1.5rem;
+	--mb-4: 2rem;
+	--mb-5: 2.5rem;
+	--mb-6: 3rem;
+	--box-mt-5: 5rem;
+	--box-mt-sm: 3rem;
+
+	/* Z index */
+	--z-tooltip: 10;
+	--z-fixed: 100;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+html {
+	overflow-x: hidden;
+	margin-right: 0;
+}
+
+body {
+	background-color: #000025;
+	color: var(--body-color);
+
+	/* margin: var(--mb-1); */
+	font-size: var(--normal-font-size);
+}
+.center {
+	text-align: center;
+}
+
+.container {
+	margin: 0 10rem;
+}
+
+button,
+.btn {
+	padding: var(--mb-2);
+	background-color: var(--secondary-color);
+	color: var(--body-color);
+	border-radius: var(--mb-1);
+	border: none;
+}
+
+button.outline {
+	background-color: var(--first-color-alt);
+	border: var(--body-color) solid 1px;
+}
+
+a {
+	color: var(--body-color);
+	text-decoration: none;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+}
+.nav .links {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.links .nav-link {
+	margin: var(--mb-2);
+}
+
+.links .nav-link:hover {
+	background-color: var(--secondary-color);
+	padding: var(--mb-2);
+	/* height: 7.5rem; */
+}
+
+.burger {
+	display: none;
+}
+
+.jumbo {
+	margin-top: var(--box-mt-5);
+}
+
+.jumbo .top-jumbo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: var(--mb-4);
+}
+
+.top-jumbo .name {
+	margin: 10rem 0 15rem 0;
+}
+
+h1 {
+	font-size: var(--biggest-font-size);
+}
+.top-jumbo .top-buttons {
+	margin-top: var(--mb-4);
+	display: flex;
+	align-items: flex-start;
+	justify-content: initial;
+}
+.top-jumbo .my-work {
+	margin-left: var(--mb-3);
+}
+
+.bottom-jumbo {
+	height: 6.6rem;
+	width: 3.75rem;
+	border: var(--secondary-color) solid 1px;
+	border-radius: 3.75rem;
+	display: flex;
+	align-items: center;
+	color: var(--secondary-color);
+	font-weight: thin;
+}
+
+.jumbo-b-pack {
+	display: flex;
+	justify-content: center;
+}
+
+.brief-intro {
+	display: flex;
+	margin-top: var(--box-mt-5);
+}
+
+.skill-highlight {
+	display: grid;
+	grid-template-rows: auto;
+	grid-gap: 1rem;
+	margin-left: 4rem;
+}
+.skills {
+	/* margin-top: 2rem; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.timer {
+	width: 100%;
+	background-color: var(--title-color);
+	height: 0.5rem;
+	border-radius: 2rem;
+}
+.js {
+	width: 75%;
+	background-color: var(--secondary-color);
+	height: 0.5rem;
+	border-radius: 2rem;
+}
+.html {
+	width: 90%;
+	background-color: #ff7004;
+	height: 0.5rem;
+	border-radius: 2rem;
+}
+.php {
+	width: 85%;
+	background-color: #ff9809;
+	height: 0.5rem;
+	border-radius: 2rem;
+}
+.node {
+	width: 80%;
+	background-color: #ffbf0d;
+	height: 0.5rem;
+	border-radius: 2rem;
+}
+
+.center-box {
+	width: 50%;
+	height: 5.938rem;
+	border-right: dashed 0.125rem var(--secondary-color);
+}
+
+.services {
+	margin-top: var(--box-mt-5);
+	margin-bottom: var(--box-mt-5);
+}
+
+.mt-2 {
+	margin-top: 0.313rem;
+}
+
+.skill-code {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	/* ...; */
+	body {
+		font-size: var(--normal-font-size);
+	}
+	h1 {
+		font-size: var(--h1-font-mobile);
+	}
+	h2 {
+		font-size: var(--h2-font-size-sm);
+	}
+	h3 {
+		font-size: var(--h3-font-size-sm);
+	}
+	.nav .links {
+		flex-direction: column;
+		/* width: 100%; */
+		display: none;
+	}
+	.container {
+		margin: 0 1rem;
+	}
+	.nav .links.active {
+		display: block;
+	}
+	.burger {
+		display: block;
+		color: var(--body-color);
+	}
+	.jumbo {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		/* margin-top: var(--mb-1); */
+		height: 300px;
+		width: 100%;
+		margin-top: var(--box-mt-sm);
+	}
+	.top-jumbo {
+		margin-top: var(--mb-1);
+		display: flex;
+		align-items: flex-start;
+		justify-content: initial;
+	}
+	.top-buttons {
+		margin-top: var(--mb-2);
+		display: flex;
+		align-items: flex-start;
+		justify-content: initial;
+	}
+	.lead-img {
+		display: none;
+	}
+
+	.bottom-jumbo {
+		display: none;
+	}
+
+	.brief-intro {
+		display: flex;
+		flex-direction: column;
+		margin-top: var(--box-mt-sm-5);
+	}
+	.workspace img {
+		width: 100%;
+		max-width: 300px;
+		height: auto;
+	}
+	.skill-highlight {
+		margin-left: 0;
+		margin-top: var(--mb-2);
+	}
+
+	.services {
+		margin-top: var(--box-mt-sm);
+	}
+	.my-service {
+		margin-bottom: var(--mb-2);
+	}
+
+	.center-box {
+		width: 50%;
+		height: 3.125rem;
+		border-right: dashed 0.125rem var(--secondary-color);
+	}
+
+	.key-services {
+		display: grid;
+		grid-template-columns: repeat(2, 9.375rem);
+		grid-gap: 0.5rem;
+		margin-top: var(--box-mt-sm);
+	}
+
+	.code-icon {
+		width: 1.275rem;
+		height: 1.275rem;
+		margin-right: var(--mb-1);
+	}
+
+	.skill-code {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 4rem;
+		background-color: #111;
+		padding: 0.5rem;
+		border-radius: 0.3rem;
+		font-size: var(--smaller-font-size);
+	}
+
+	.icon-text {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.icon-arrow {
+		width: 2rem;
+		height: 1rem;
+		color: var(--secondary-color);
+	}
+
+	.view {
+		margin-top: var(--box-mt-sm);
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	/* ...; */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	/* ...; */
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	/* ...; */
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	/* ...; */
+}
