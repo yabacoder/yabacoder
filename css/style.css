@@ -88,6 +88,11 @@ button.outline {
 	border: var(--body-color) solid 1px;
 }
 
+svg {
+	width: 24px;
+	height: 24px;
+}
+
 a {
 	color: var(--body-color);
 	text-decoration: none;
@@ -113,12 +118,13 @@ a {
 	/* height: 7.5rem; */
 }
 
-.burger {
+.burger,
+.mobile-nav {
 	display: none;
 }
 
 .jumbo {
-	margin-top: var(--box-mt-5);
+	margin-top: var(--mb-3);
 }
 
 .jumbo .top-jumbo {
@@ -135,6 +141,14 @@ a {
 h1 {
 	font-size: var(--biggest-font-size);
 }
+
+h2 {
+	font-size: var(--h2-font-size);
+}
+
+h3 {
+	font-size: var(--h3-font-size);
+}
 .top-jumbo .top-buttons {
 	margin-top: var(--mb-4);
 	display: flex;
@@ -146,8 +160,8 @@ h1 {
 }
 
 .bottom-jumbo {
-	height: 6.6rem;
-	width: 3.75rem;
+	height: 3.6rem;
+	width: 1.75rem;
 	border: var(--secondary-color) solid 1px;
 	border-radius: 3.75rem;
 	display: flex;
@@ -224,10 +238,183 @@ h1 {
 	margin-top: 0.313rem;
 }
 
+.key-services {
+	display: grid;
+	grid-template-columns: repeat(3, 27rem);
+	grid-gap: 1rem;
+	margin-top: var(--box-mt-sm);
+}
+
+.code-icon {
+	width: 2rem;
+	height: 0.9rem;
+	margin-right: var(--mb-1);
+}
+
 .skill-code {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
+	height: 7.2rem;
+	background-color: var(--tertiary-color);
+	padding: 1rem;
+	border-radius: 0.6rem;
+	font-size: var(--font-medium);
+}
+
+.icon-text {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.code-icon {
+	width: 2.275rem;
+	height: 2.275rem;
+	margin-right: var(--mb-1);
+}
+
+.icon-arrow {
+	width: 4rem;
+	height: 2rem;
+	color: var(--secondary-color);
+}
+
+.view {
+	margin-top: var(--box-mt-sm);
+	width: 15.063rem;
+}
+
+.career-highlight {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* margin-top: var(--box-mt-sm); */
+	/* display: grid; */
+	/* grid-template-columns: repeat(1, 250px); */
+	/* grid-column: 150px; */
+	/* grid-gap: 0.5rem; */
+}
+
+.career-highlight div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: dashed 1px var(--secondary-color);
+	padding: var(--mb-2);
+	background-color: var(--tertiary-color);
+	margin: var(--mb-4);
+	width: 250px;
+	height: 250px;
+	cursor: pointer;
+}
+
+.career-highlight div:hover {
+	background-color: var(--secondary-color);
+}
+
+.portfolio {
+	margin-top: var(--box-mt-5);
+}
+
+.portfolio .title {
+	margin: var(--mb-4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.portfolio .title div {
+	margin-right: var(--mb-3);
+}
+
+.portfolio .title .active {
+	border-bottom: var(--secondary-color) 2px solid;
+}
+
+.projects {
+	/* display: flex; */
+	/* margin-top: var(--box-mt-sm); */
+	display: grid;
+	grid-template-columns: repeat(3, 250px);
+	/* grid-column: 150px; */
+	grid-gap: 1rem;
+	justify-content: center;
+}
+
+.projects img {
+	max-width: 250px;
+}
+
+.project-hover {
+	background-color: var(--secondary-color);
+	color: white;
+}
+
+.testimonials {
+	margin-top: var(--box-mt-sm);
+}
+
+.testimonials .slider {
+	width: 100%;
+	display: flex;
+	/* padding: var(--mb-3); */
+}
+.testimonial .box {
+	margin-bottom: var(--mb-4);
+}
+.testimonials .slider .slide {
+	margin: var(--mb-2);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--tertiary-color);
+	padding: var(--mb-3);
+	width: 100%;
+}
+.testimonials .slider .slide img {
+	border-radius: 50%;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: -50px;
+}
+
+.testimonials .slider .slide p {
+	margin-top: var(--mb-5);
+	color: var(--secondary-color);
+	font-weight: bold;
+}
+.testimonials .slider .slide p:last-child {
+	margin-top: var(--mb-2);
+	color: var(--body-color);
+	font-weight: normal;
+}
+.testimonials .switch {
+	margin-top: var(--mb-2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.testimonials .switch div {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 2px;
+}
+.testimonials .switch .swt {
+	width: 40px;
+	height: 5px;
+	background-color: var(--text-color);
+}
+
+.testimonials .switch .swt.active {
+	width: 40px;
+	height: 5px;
+	background-color: var(--secondary-color);
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -359,6 +546,7 @@ h1 {
 
 	.view {
 		margin-top: var(--box-mt-sm);
+		width: 7.063rem;
 	}
 
 	.career-highlight,
@@ -513,8 +701,6 @@ h1 {
 	.blogs .blog div svg {
 		color: white;
 		/* width: 100px; */
-		width: 2.4rem;
-		height: 2.4rem;
 	}
 
 	.blogs .blog div .box {
